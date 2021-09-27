@@ -26,7 +26,7 @@ async def index_target_chat(client: Bot, message: Message):
     if os.path.isfile(cfg_file):
         await import_cfg_data(id, target_chat)
         await message.edit(Presets.TARGET_CFG_LOAD_MSG)
-        await asyncio.sleep(10)
+        await asyncio.sleep(5)
         await clone_medias(client, message)
         return
     #
